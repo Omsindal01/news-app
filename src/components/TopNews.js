@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getTopNews, getNewsByTopic, getByFilter } from "./ApiCalls";
 import Card from "./Card";
+import { AiOutlineMenu } from "react-icons/ai";
 export default function TopNews() {
   const [news, setNews] = useState([]);
   const [query, setQuery] = useState("");
@@ -29,7 +30,7 @@ export default function TopNews() {
     <>
       <div className="home-page">
         <div className="search-bar">
-          <nav className="navbar navbar-expand-lg bg-light">
+          <nav className="navbar navbar-expand-sm bg-light">
             <div className="container-fluid">
               <button
                 className="navbar-toggler"
@@ -40,7 +41,9 @@ export default function TopNews() {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon">
+                  <AiOutlineMenu />
+                </span>
               </button>
               <div
                 className="collapse navbar-collapse"

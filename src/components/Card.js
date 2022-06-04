@@ -9,8 +9,7 @@ export default function Card({
   url,
 }) {
   const myStyle = {
-    width: "18rem",
-    flex: "24%",
+    width: "19rem",
     margin: "10px 0.5%",
   };
   return (
