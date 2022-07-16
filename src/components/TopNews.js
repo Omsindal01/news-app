@@ -26,6 +26,7 @@ export default function TopNews() {
   useEffect(() => {
     if (filter !== "") getByFilter(filter).then((data) => setNews(data));
   }, [filter]);
+  console.log(news);
   return (
     <>
       <div className="home-page">
@@ -82,17 +83,22 @@ export default function TopNews() {
             </div>
           </nav>
         </div>
-        <div className="news-bar">
+        <div className="row">
           {news.map((el, i) => (
-            <Card
+            <div
               key={i}
-              imgUrl={el.urlToImage}
-              title={el.title}
-              description={el.description}
-              author={el.author}
-              date={el.publishedAt}
-              url={el.url}
-            />
+              className="cardContainer col-xs-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 me-auto mt-4"
+            >
+              <Card
+                imgUrl={el.urlToImage}
+                title={el.title}
+                description={el.description}
+                author={el.author}
+                date={el.publishedAt}
+                url={el.url}
+                source={el.source}
+              />
+            </div>
           ))}
         </div>
       </div>
