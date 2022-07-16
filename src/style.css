@@ -3,40 +3,30 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-html {
-  width: 100vw;
-}
-body {
-  width: 100vw;
-}
 ::-webkit-scrollbar {
   display: none;
 }
 .home-page {
-  width: 100%;
+  width: 100vw;
 }
 .search-bar {
   width: 100%;
 }
-.news-bar {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px 0;
+.row {
+  align-items: stretch;
 }
 .card-img-top {
   height: 150px;
-}
-.card-body {
-  height: 300px;
-  overflow-y: hidden;
+  background-image: url("./components/dummy.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .collapse {
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* width: 100%; */
+}
+.card-link {
+  text-decoration: none;
 }
